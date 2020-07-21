@@ -12,7 +12,6 @@ import RealmSwift
 class NewsViewController: UITableViewController {
     
     // MARK: - Public Properties
-    
     let realm = try! Realm()
     let networkService = NetworkService()
     var news: News? = nil
@@ -31,7 +30,6 @@ class NewsViewController: UITableViewController {
     }
     
     // MARK: - Table view data source
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return news?.articles.count ?? 0
     }
@@ -46,7 +44,6 @@ class NewsViewController: UITableViewController {
     }
     
     // MARK: - Table View Delegate
-    
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 250
     }

@@ -30,11 +30,9 @@ enum ChannelsNames: String, CaseIterable {
 class FavoritesTableViewController: UITableViewController {
     
     // MARK: - Private Properties
-    
     private let channelsNames = ChannelsNames.allCases
     
     // MARK: - Public Properties
-    
     let realm = try! Realm()
     let networkService = NetworkService()
     let channels = ArrayOfChannels()
@@ -52,7 +50,6 @@ class FavoritesTableViewController: UITableViewController {
     }
     
     // MARK: - Table view data source
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return favoritesChannels.count
     }
@@ -69,7 +66,6 @@ class FavoritesTableViewController: UITableViewController {
     }
     
     // MARK: - Table view delegate
-    
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         return 100
@@ -95,7 +91,6 @@ class FavoritesTableViewController: UITableViewController {
     }
     
     // MARK: - Navigation
-    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let channelNames = channelsNames[indexPath.item]
         

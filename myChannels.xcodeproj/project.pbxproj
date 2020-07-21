@@ -14,6 +14,8 @@
 		FA36E2FD24C5D44900223FF6 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA36E2FC24C5D44900223FF6 /* NewsCell.swift */; };
 		FA36E30124C5FE0400223FF6 /* ArrayOfChannels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA36E30024C5FE0400223FF6 /* ArrayOfChannels.swift */; };
 		FA36E30324C6086A00223FF6 /* FavoritesNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA36E30224C6086A00223FF6 /* FavoritesNews.swift */; };
+		FAC1E6A124C6FDE200D2686F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC1E6A024C6FDE200D2686F /* SearchViewController.swift */; };
+		FAC1E6A324C719B600D2686F /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC1E6A224C719B600D2686F /* SearchCell.swift */; };
 		FAFEF71624C3353F008CAA8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFEF71524C3353F008CAA8A /* AppDelegate.swift */; };
 		FAFEF71824C3353F008CAA8A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFEF71724C3353F008CAA8A /* SceneDelegate.swift */; };
 		FAFEF71A24C3353F008CAA8A /* ChannelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFEF71924C3353F008CAA8A /* ChannelsViewController.swift */; };
@@ -35,6 +37,8 @@
 		FA36E2FC24C5D44900223FF6 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		FA36E30024C5FE0400223FF6 /* ArrayOfChannels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayOfChannels.swift; sourceTree = "<group>"; };
 		FA36E30224C6086A00223FF6 /* FavoritesNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesNews.swift; sourceTree = "<group>"; };
+		FAC1E6A024C6FDE200D2686F /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		FAC1E6A224C719B600D2686F /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		FAFEF71224C3353F008CAA8A /* My Channels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Channels.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAFEF71524C3353F008CAA8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAFEF71724C3353F008CAA8A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +119,7 @@
 				FAFEF71924C3353F008CAA8A /* ChannelsViewController.swift */,
 				FAFEF72D24C33DF2008CAA8A /* FavoritesTableViewController.swift */,
 				FA36E2FA24C5CCB200223FF6 /* NewsViewController.swift */,
+				FAC1E6A024C6FDE200D2686F /* SearchViewController.swift */,
 			);
 			path = myChannels;
 			sourceTree = "<group>";
@@ -125,6 +130,7 @@
 				FAFEF73324C33F30008CAA8A /* Channel.swift */,
 				FA36E30024C5FE0400223FF6 /* ArrayOfChannels.swift */,
 				FA36E2FC24C5D44900223FF6 /* NewsCell.swift */,
+				FAC1E6A224C719B600D2686F /* SearchCell.swift */,
 				FA021ABA24C4EEDA004B448E /* Realm */,
 				FAFEF73524C39213008CAA8A /* Networking */,
 			);
@@ -284,11 +290,13 @@
 				FA36E30124C5FE0400223FF6 /* ArrayOfChannels.swift in Sources */,
 				FAFEF73424C33F30008CAA8A /* Channel.swift in Sources */,
 				FA021AB924C4EEBD004B448E /* FavoriteChannel.swift in Sources */,
+				FAC1E6A324C719B600D2686F /* SearchCell.swift in Sources */,
 				FAFEF71A24C3353F008CAA8A /* ChannelsViewController.swift in Sources */,
 				FA36E2FB24C5CCB200223FF6 /* NewsViewController.swift in Sources */,
 				FA36E2FD24C5D44900223FF6 /* NewsCell.swift in Sources */,
 				FA36E2F924C5C21200223FF6 /* StorageManager.swift in Sources */,
 				FAFEF73724C39232008CAA8A /* NetworkService.swift in Sources */,
+				FAC1E6A124C6FDE200D2686F /* SearchViewController.swift in Sources */,
 				FAFEF71624C3353F008CAA8A /* AppDelegate.swift in Sources */,
 				FAFEF71824C3353F008CAA8A /* SceneDelegate.swift in Sources */,
 				FA36E30324C6086A00223FF6 /* FavoritesNews.swift in Sources */,

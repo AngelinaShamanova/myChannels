@@ -12,11 +12,9 @@ import RealmSwift
 class ChannelsViewController: UITableViewController {
     
     // MARK: - Private Properties
-    
     private let channelsNames = ChannelsNames.allCases
     
     // MARK: - Public Properties
-    
     let realm = try! Realm()
     let networkService = NetworkService()
     let channels = ArrayOfChannels()
@@ -24,11 +22,10 @@ class ChannelsViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        fetchData(withUrl: "http://newsapi.org/v2/top-headlines?country=us&apiKey=340a3e652a6a4e7bb3537f611303cc29")
     }
     
     // MARK: - Table view data source
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return channels.channels.count
     }
@@ -67,6 +64,15 @@ class ChannelsViewController: UITableViewController {
         let _ = self.addToFavorites(at: indexPath)
         let swipe = UISwipeActionsConfiguration(actions: [addToFavorites(at: indexPath)])
         return swipe
+    }
+    
+    func fetchData(withUrl url: String) {
+        self.networkService.request(urlString: url) { [weak self] (news, error) in
+            news?.articles.map({ (new) in
+                self?.news = news
+                self?.tableView.reloadData()
+            })
+        }
     }
     
 }

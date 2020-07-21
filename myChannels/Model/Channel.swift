@@ -9,11 +9,11 @@
 import Foundation
 
 struct News: Decodable {
-    var articles: [Article]?
+    var articles: [Article]
 }
 
 struct Article: Decodable {
-    var title: String?
+    var title: String
     var description: String?
     var urlToImage: String?
     var source: Source

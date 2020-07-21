@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9Su-qq-R1U">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -34,7 +35,7 @@
                                             <rect key="frame" x="20" y="31.5" width="48.5" height="15.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="15"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -80,7 +81,7 @@
             </objects>
             <point key="canvasLocation" x="591" y="197"/>
         </scene>
-        <!--Favorites Channels-->
+        <!--Favorites-->
         <scene sceneID="mA6-Eh-PsY">
             <objects>
                 <tableViewController id="EZK-HK-Vmx" customClass="FavoritesTableViewController" customModule="My_Channels" customModuleProvider="target" sceneMemberID="viewController">
@@ -89,55 +90,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.59871810674667358" green="0.56559789180755615" blue="0.64100992679595947" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="sectionIndexBackgroundColor" red="0.59871810674667358" green="0.56559789180755615" blue="0.64100992679595947" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <segmentedControl key="tableHeaderView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="GDA-sV-25o">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="32"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <segments>
-                                <segment title="Channels"/>
-                                <segment title="News"/>
-                            </segments>
-                        </segmentedControl>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="favoriteCell" rowHeight="186" id="2cd-y0-HdI">
-                                <rect key="frame" x="0.0" y="60" width="414" height="186"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="favoriteCell" textLabel="BzQ-S9-dTH" rowHeight="186" style="IBUITableViewCellStyleDefault" id="2cd-y0-HdI">
+                                <rect key="frame" x="0.0" y="28" width="414" height="186"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2cd-y0-HdI" id="XZi-66-cj5">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="186"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4sW-5Y-lGo">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="186"/>
-                                        </imageView>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Toq-XJ-PEO">
-                                            <rect key="frame" x="25" y="131" width="364" height="33"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oek-3p-N56">
-                                                    <rect key="frame" x="0.0" y="0.0" width="364" height="17.5"/>
-                                                    <color key="backgroundColor" red="0.59871810674667358" green="0.56559789180755615" blue="0.64100992679595947" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="17"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IwV-jd-HlT">
-                                                    <rect key="frame" x="0.0" y="17.5" width="364" height="15.5"/>
-                                                    <color key="backgroundColor" red="0.59871810674667358" green="0.56559789180755615" blue="0.64100992679595947" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="15"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </stackView>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BzQ-S9-dTH">
+                                            <rect key="frame" x="20" y="0.0" width="374" height="186"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <color key="backgroundColor" red="0.59871810674667358" green="0.56559789180755615" blue="0.64100992679595947" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <constraints>
-                                        <constraint firstItem="Toq-XJ-PEO" firstAttribute="leading" secondItem="XZi-66-cj5" secondAttribute="leadingMargin" constant="5" id="3Ff-ca-h9o"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="Toq-XJ-PEO" secondAttribute="trailing" constant="5" id="68d-Ed-UAo"/>
-                                        <constraint firstAttribute="bottom" secondItem="4sW-5Y-lGo" secondAttribute="bottom" id="881-hx-GHH"/>
-                                        <constraint firstItem="Toq-XJ-PEO" firstAttribute="top" secondItem="XZi-66-cj5" secondAttribute="topMargin" constant="120" id="ZHR-ZE-R48"/>
-                                        <constraint firstItem="4sW-5Y-lGo" firstAttribute="leading" secondItem="XZi-66-cj5" secondAttribute="leading" id="bom-g8-Dce"/>
-                                        <constraint firstAttribute="trailing" secondItem="4sW-5Y-lGo" secondAttribute="trailing" id="eib-1R-bFp"/>
-                                        <constraint firstItem="4sW-5Y-lGo" firstAttribute="top" secondItem="XZi-66-cj5" secondAttribute="top" id="iwK-ki-Kdq"/>
-                                    </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.59871810674667358" green="0.56559789180755615" blue="0.64100992679595947" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -148,11 +117,113 @@
                             <outlet property="delegate" destination="EZK-HK-Vmx" id="9b3-Sq-YoJ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Favorites Channels" id="DJW-43-v0v"/>
+                    <navigationItem key="navigationItem" title="Favorites" id="DJW-43-v0v">
+                        <barButtonItem key="backBarButtonItem" title="Favorites" id="eoV-O1-h96"/>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="3e7-qX-0ZI" kind="show" identifier="CNN" id="EtM-bz-IQe"/>
+                        <segue destination="3e7-qX-0ZI" kind="show" identifier="GoogleNews" id="hq5-VQ-ZQX"/>
+                        <segue destination="3e7-qX-0ZI" kind="show" identifier="USAToday" id="FSU-qI-b4I"/>
+                        <segue destination="3e7-qX-0ZI" kind="show" identifier="Space" id="ySw-HG-0gw"/>
+                        <segue destination="3e7-qX-0ZI" kind="show" identifier="Eonline" id="BQt-JT-Sa6"/>
+                        <segue destination="3e7-qX-0ZI" kind="show" identifier="BleacherReport" id="kNW-fs-yHc"/>
+                        <segue destination="3e7-qX-0ZI" kind="show" identifier="CinemaBlend" id="GX8-wT-IIG"/>
+                        <segue destination="3e7-qX-0ZI" kind="show" identifier="CBSNews" id="XvE-mt-Lga"/>
+                        <segue destination="3e7-qX-0ZI" kind="show" identifier="NPR" id="Tye-dX-vYw"/>
+                        <segue destination="3e7-qX-0ZI" kind="show" identifier="NewYorkPost" id="hxn-Jy-6DJ"/>
+                        <segue destination="3e7-qX-0ZI" kind="show" identifier="MarketWatch" id="RYi-vH-M3I"/>
+                        <segue destination="3e7-qX-0ZI" kind="show" identifier="TheWallStreetJournal" id="EwP-tD-3Ri"/>
+                        <segue destination="3e7-qX-0ZI" kind="show" identifier="UsWeekly" id="BMN-px-ZXi"/>
+                        <segue destination="3e7-qX-0ZI" kind="show" identifier="FoxNews" id="b59-fh-U6l"/>
+                        <segue destination="3e7-qX-0ZI" kind="show" identifier="ArsTechnica" id="ZW2-LE-Bfp"/>
+                        <segue destination="3e7-qX-0ZI" kind="show" identifier="syracuse" id="8YT-ji-ekA"/>
+                        <segue destination="3e7-qX-0ZI" kind="show" identifier="VikingsTerritory" id="mgG-dM-056"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zDv-9A-WPS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1926.0869565217392" y="921.42857142857133"/>
+            <point key="canvasLocation" x="1735" y="921"/>
+        </scene>
+        <!--News-->
+        <scene sceneID="Ecv-gS-xhY">
+            <objects>
+                <tableViewController id="3e7-qX-0ZI" customClass="NewsViewController" customModule="My_Channels" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="bEY-2g-e3T">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.59871810674667358" green="0.56559789180755615" blue="0.64100992679595947" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.59871810674667358" green="0.56559789180755615" blue="0.64100992679595947" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="newsCell" rowHeight="205" id="vMG-Bl-e6v" customClass="NewsCell" customModule="My_Channels" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="205"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vMG-Bl-e6v" id="LRD-Mh-KgV">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="205"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5d5-Sg-OlH">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="205"/>
+                                        </imageView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gwB-mm-wbG">
+                                            <rect key="frame" x="0.0" y="170.5" width="414" height="32"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bjl-2b-Vzu">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="17.5"/>
+                                                    <color key="backgroundColor" red="0.59871810674667358" green="0.56559789180755615" blue="0.64100992679595947" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UoS-K1-LNI">
+                                                    <rect key="frame" x="0.0" y="17.5" width="414" height="14.5"/>
+                                                    <color key="backgroundColor" red="0.59871810674667358" green="0.56559789180755615" blue="0.64100992679595947" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="14"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iZW-JQ-JYh">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="15.5"/>
+                                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="15"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.59871810674667358" green="0.56559789180755615" blue="0.64100992679595947" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="5d5-Sg-OlH" secondAttribute="bottom" id="05a-N1-Rzj"/>
+                                        <constraint firstAttribute="trailing" secondItem="5d5-Sg-OlH" secondAttribute="trailing" id="9Xs-kI-9Cx"/>
+                                        <constraint firstAttribute="trailing" secondItem="gwB-mm-wbG" secondAttribute="trailing" id="EUN-lx-KC0"/>
+                                        <constraint firstItem="gwB-mm-wbG" firstAttribute="top" secondItem="iZW-JQ-JYh" secondAttribute="bottom" constant="155" id="HaV-nv-Q7G"/>
+                                        <constraint firstItem="5d5-Sg-OlH" firstAttribute="leading" secondItem="LRD-Mh-KgV" secondAttribute="leading" id="IZf-iS-2aN"/>
+                                        <constraint firstItem="5d5-Sg-OlH" firstAttribute="top" secondItem="LRD-Mh-KgV" secondAttribute="top" id="N8x-Fx-J8J"/>
+                                        <constraint firstItem="iZW-JQ-JYh" firstAttribute="leading" secondItem="LRD-Mh-KgV" secondAttribute="leading" id="PLj-rX-O9I"/>
+                                        <constraint firstItem="iZW-JQ-JYh" firstAttribute="top" secondItem="LRD-Mh-KgV" secondAttribute="top" id="a67-cG-CYn"/>
+                                        <constraint firstItem="gwB-mm-wbG" firstAttribute="leading" secondItem="LRD-Mh-KgV" secondAttribute="leading" id="eAJ-qJ-gFO"/>
+                                        <constraint firstAttribute="trailing" secondItem="iZW-JQ-JYh" secondAttribute="trailing" id="uoo-xt-hTb"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.59871810674667358" green="0.56559789180755615" blue="0.64100992679595947" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="channelName" destination="iZW-JQ-JYh" id="M7z-lk-E2U"/>
+                                    <outlet property="detailOfNews" destination="UoS-K1-LNI" id="l6o-BX-Oyp"/>
+                                    <outlet property="imageOfNews" destination="5d5-Sg-OlH" id="faE-bL-qPB"/>
+                                    <outlet property="titleOfNews" destination="Bjl-2b-Vzu" id="oQx-bJ-Vud"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="3e7-qX-0ZI" id="n7w-FA-y4O"/>
+                            <outlet property="delegate" destination="3e7-qX-0ZI" id="ePi-ad-TbB"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="News" id="7yP-Uq-xAD"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B6J-U3-8Kj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1063.768115942029" y="2025.6696428571427"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="l4p-14-VcM">
@@ -218,7 +289,11 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.59871810674667358" green="0.56559789180755615" blue="0.64100992679595947" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.59871810674667358" green="0.56559789180755615" blue="0.64100992679595947" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
@@ -242,6 +317,13 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.59871810674667358" green="0.56559789180755615" blue="0.64100992679595947" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.59871810674667358" green="0.56559789180755615" blue="0.64100992679595947" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -253,4 +335,7 @@
             <point key="canvasLocation" x="-784.05797101449286" y="920.75892857142856"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="EtM-bz-IQe"/>
+    </inferredMetricsTieBreakers>
 </document>

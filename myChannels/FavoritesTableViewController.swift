@@ -9,28 +9,7 @@
 import UIKit
 import RealmSwift
 
-enum ChannelsNames: String, CaseIterable {
-    case cnn = "CNN"
-    case usaToday = "USA Today"
-    case space = "Space.com"
-    case eonline = "Eonline.com"
-    case bleacherReport = "Bleacher Report"
-    case cinemaBlend = "CinemaBlend"
-    case cbsNews = "CBS News"
-    case npr = "NPR"
-    case newYorkPost = "New York Post"
-    case marketWatch = "MarketWatch"
-    case theWallStreetJournal = "The Wall Street Journal"
-    case usWeekly = "Us Weekly"
-    case foxNews = "Fox News"
-    case arsTechnica = "Ars Technica"
-    case syracuse = "syracuse.com"
-}
-
 class FavoritesTableViewController: UITableViewController {
-    
-    // MARK: - Private Properties
-    private let channelsNames = ChannelsNames.allCases
     
     // MARK: - Public Properties
     let realm = try! Realm()
@@ -60,7 +39,6 @@ class FavoritesTableViewController: UITableViewController {
         cell.textLabel?.text = favoritesChannels[indexPath.row].nameOfChannel
         cell.textLabel?.font = UIFont(name: "Copperplate", size: 20.0)
         cell.textLabel?.textColor = .white
-        
         
         return cell
     }
@@ -92,44 +70,41 @@ class FavoritesTableViewController: UITableViewController {
     
     // MARK: - Navigation
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let channelNames = channelsNames[indexPath.item]
+        let indexPath = IndexPath(row: indexPath.row, section: 0)
+        let cell = tableView.cellForRow(at: indexPath)
         
-        switch channelNames {
-        case .cnn:
+        if cell?.textLabel?.text == "CNN" {
             performSegue(withIdentifier: "CNN", sender: self)
-        case .usaToday:
+        } else if cell?.textLabel?.text == "USA Today" {
             performSegue(withIdentifier: "USAToday", sender: self)
-        case .space:
+        } else if cell?.textLabel?.text == "Space.com" {
             performSegue(withIdentifier: "Space", sender: self)
-        case .eonline:
+        } else if cell?.textLabel?.text == "Eonline.com" {
             performSegue(withIdentifier: "Eonline", sender: self)
-        case .bleacherReport:
+        } else if cell?.textLabel?.text == "Bleacher Report" {
             performSegue(withIdentifier: "BleacherReport", sender: self)
-        case .cinemaBlend:
+        } else if cell?.textLabel?.text == "CinemaBlend" {
             performSegue(withIdentifier: "CinemaBlend", sender: self)
-        case .cbsNews:
+        } else if cell?.textLabel?.text == "CBS News" {
             performSegue(withIdentifier: "CBSNews", sender: self)
-        case .npr:
+        } else if cell?.textLabel?.text == "NPR" {
             performSegue(withIdentifier: "NPR", sender: self)
-        case .newYorkPost:
+        } else if cell?.textLabel?.text == "New York Post" {
             performSegue(withIdentifier: "NewYorkPost", sender: self)
-        case .marketWatch:
+        } else if cell?.textLabel?.text == "MarketWatch" {
             performSegue(withIdentifier: "MarketWatch", sender: self)
-        case .theWallStreetJournal:
+        } else if cell?.textLabel?.text == "The Wall Street Journal" {
             performSegue(withIdentifier: "TheWallStreetJournal", sender: self)
-        case .usWeekly:
+        } else if cell?.textLabel?.text == "Us Weekly" {
             performSegue(withIdentifier: "UsWeekly", sender: self)
-        case .foxNews:
+        } else if cell?.textLabel?.text == "Fox News" {
             performSegue(withIdentifier: "FoxNews", sender: self)
-        case .arsTechnica:
+        } else if cell?.textLabel?.text == "Ars Technica" {
             performSegue(withIdentifier: "ArsTechnica", sender: self)
-        case .syracuse:
+        } else if cell?.textLabel?.text == "syracuse.com" {
             performSegue(withIdentifier: "syracuse", sender: self)
-            
         }
-        
     }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let newsVC = segue.destination as! NewsViewController
         
@@ -167,6 +142,8 @@ class FavoritesTableViewController: UITableViewController {
             
         default: break
         }
+        
+        tableView.reloadData()
     }
     
 }

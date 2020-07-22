@@ -9,6 +9,24 @@
 import UIKit
 import RealmSwift
 
+enum ChannelsNames: String, CaseIterable {
+    case cnn = "CNN"
+    case usaToday = "USA Today"
+    case space = "Space.com"
+    case eonline = "Eonline.com"
+    case bleacherReport = "Bleacher Report"
+    case cinemaBlend = "CinemaBlend"
+    case cbsNews = "CBS News"
+    case npr = "NPR"
+    case newYorkPost = "New York Post"
+    case marketWatch = "MarketWatch"
+    case theWallStreetJournal = "The Wall Street Journal"
+    case usWeekly = "Us Weekly"
+    case foxNews = "Fox News"
+    case arsTechnica = "Ars Technica"
+    case syracuse = "syracuse.com"
+}
+
 class ChannelsViewController: UITableViewController {
     
     // MARK: - Private Properties

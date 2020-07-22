@@ -116,10 +116,6 @@
 				FAFEF72924C33C1A008CAA8A /* Model */,
 				FAFEF72A24C33C20008CAA8A /* View */,
 				FAFEF72B24C33C25008CAA8A /* Controller */,
-				FAFEF71924C3353F008CAA8A /* ChannelsViewController.swift */,
-				FAFEF72D24C33DF2008CAA8A /* FavoritesTableViewController.swift */,
-				FA36E2FA24C5CCB200223FF6 /* NewsViewController.swift */,
-				FAC1E6A024C6FDE200D2686F /* SearchViewController.swift */,
 			);
 			path = myChannels;
 			sourceTree = "<group>";
@@ -150,6 +146,10 @@
 		FAFEF72B24C33C25008CAA8A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FAFEF71924C3353F008CAA8A /* ChannelsViewController.swift */,
+				FAFEF72D24C33DF2008CAA8A /* FavoritesTableViewController.swift */,
+				FA36E2FA24C5CCB200223FF6 /* NewsViewController.swift */,
+				FAC1E6A024C6FDE200D2686F /* SearchViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

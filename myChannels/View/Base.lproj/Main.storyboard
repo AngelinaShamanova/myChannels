@@ -267,18 +267,25 @@
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qwU-aL-yZY">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="271"/>
                                         </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fFC-Rp-7OF">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="15.5"/>
+                                            <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="15"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ZpL-Xa-5yP">
-                                            <rect key="frame" x="20" y="166" width="374" height="32"/>
+                                            <rect key="frame" x="0.0" y="166" width="414" height="32"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QTK-zv-9V7">
-                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="17.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="17.5"/>
                                                     <color key="backgroundColor" red="0.59871810674667358" green="0.56559789180755615" blue="0.64100992679595947" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fPc-dw-Yb6">
-                                                    <rect key="frame" x="0.0" y="17.5" width="374" height="14.5"/>
+                                                    <rect key="frame" x="0.0" y="17.5" width="414" height="14.5"/>
                                                     <color key="backgroundColor" red="0.59871810674667358" green="0.56559789180755615" blue="0.64100992679595947" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="14"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -287,13 +294,6 @@
                                             </subviews>
                                             <color key="backgroundColor" red="0.59871810674667358" green="0.56559789180755615" blue="0.64100992679595947" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </stackView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fFC-Rp-7OF">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="15.5"/>
-                                            <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="15"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                     </subviews>
                                     <color key="backgroundColor" red="0.59871810674667358" green="0.56559789180755615" blue="0.64100992679595947" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
@@ -302,11 +302,11 @@
                                         <constraint firstAttribute="trailing" secondItem="fFC-Rp-7OF" secondAttribute="trailing" id="Zyg-v3-XGU"/>
                                         <constraint firstItem="qwU-aL-yZY" firstAttribute="top" secondItem="tBp-gY-BKA" secondAttribute="top" id="b1M-Fp-Ras"/>
                                         <constraint firstItem="ZpL-Xa-5yP" firstAttribute="top" secondItem="tBp-gY-BKA" secondAttribute="topMargin" constant="155" id="egI-os-RvC"/>
-                                        <constraint firstItem="ZpL-Xa-5yP" firstAttribute="leading" secondItem="tBp-gY-BKA" secondAttribute="leadingMargin" id="fEv-a3-qng"/>
                                         <constraint firstItem="fFC-Rp-7OF" firstAttribute="leading" secondItem="tBp-gY-BKA" secondAttribute="leading" id="gLT-DB-Uet"/>
+                                        <constraint firstAttribute="trailing" secondItem="ZpL-Xa-5yP" secondAttribute="trailing" id="jya-4K-V0O"/>
+                                        <constraint firstItem="ZpL-Xa-5yP" firstAttribute="leading" secondItem="tBp-gY-BKA" secondAttribute="leading" id="kls-ra-teg"/>
                                         <constraint firstItem="qwU-aL-yZY" firstAttribute="leading" secondItem="tBp-gY-BKA" secondAttribute="leading" id="u4Z-Kq-Wee"/>
                                         <constraint firstAttribute="trailing" secondItem="qwU-aL-yZY" secondAttribute="trailing" id="vMT-Nq-Qve"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="ZpL-Xa-5yP" secondAttribute="trailing" id="zV0-Ua-pOi"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.59871810674667358" green="0.56559789180755615" blue="0.64100992679595947" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

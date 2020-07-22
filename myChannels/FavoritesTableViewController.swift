@@ -14,7 +14,6 @@ class FavoritesTableViewController: UITableViewController {
     // MARK: - Public Properties
     let realm = try! Realm()
     let networkService = NetworkService()
-    let channels = ArrayOfChannels()
     var news: News? = nil
     var favoritesChannels: Results<FavoriteChannel>!
     

@@ -1,5 +1,5 @@
 //
-//  ArrayOfChannels.swift
+//  ChannelsInfo.swift
 //  myChannels
 //
 //  Created by MacBook on 20/07/2020.
@@ -8,9 +8,7 @@
 
 import Foundation
 
-class ArrayOfChannels {
-    
-    var channels = ["CNN", "USA Today", "Space.com", "Eonline.com", "Bleacher Report", "CinemaBlend", "CBS News", "NPR", "New York Post", "MarketWatch", "The Wall Street Journal", "Us Weekly", "Fox News", "Ars Technica", "syracuse.com"]
+class ChannelsInfo {
     
     let descriptionOfChannel = ["CNN (Cable News Network) is an American news-based pay television channel owned by CNN Worldwide, a unit of the WarnerMedia News & Sports division of AT&T's WarnerMedia.",
                                 

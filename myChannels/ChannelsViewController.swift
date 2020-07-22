@@ -35,7 +35,7 @@ class ChannelsViewController: UITableViewController {
     // MARK: - Public Properties
     let realm = try! Realm()
     let networkService = NetworkService()
-    let channels = ArrayOfChannels()
+    let channels = ChannelsInfo()
     var news: News? = nil
     
     override func viewDidLoad() {
@@ -45,7 +45,7 @@ class ChannelsViewController: UITableViewController {
     
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return channels.channels.count
+        return channelsNames.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -70,7 +70,7 @@ class ChannelsViewController: UITableViewController {
             let favoriteChannel = FavoriteChannel()
             
             try! self.realm.write {
-                favoriteChannel.nameOfChannel.append(contentsOf: self.channels.channels[indexPath.row])
+                favoriteChannel.nameOfChannel.append(contentsOf: self.channelsNames[indexPath.row].rawValue)
                 self.realm.add(favoriteChannel)
             }
         }
